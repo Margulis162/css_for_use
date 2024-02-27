@@ -1,0 +1,73 @@
+/* page layout */
+
+*{
+    margin:0;
+    padding:0;
+    /* box-sizing: border-box; */
+}
+
+body{
+    background-color: lightgray;
+}
+
+#container{
+    block-size:100vh;
+    inline-size:960px;
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    /* background-color: blueviolet;  */
+    inline-size: 960px;
+    block-size: 100px;
+    margin-block:25px;
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+/* switch general */
+
+
+
+.switch input{
+    width:5px;
+    height:5px;
+    opacity:0;
+    display:block;
+    margin-block-start: -5px;
+    margin-inline-start:-5px; /*if i go down to one pixel it doesn't do what I intend to do. How curious!*/
+}
+
+/* toggle # 1 */
+
+#switch-1{
+    display: inline-block;
+    block-size: 50px;
+    inline-size:50px;
+    border-radius:5px;
+     /*this part get's modified on click*/
+    box-shadow: -1px -1px 7px silver, 
+                inset -1px -1px 6px steelblue,
+                inset 1px 1px 5px lightgoldenrodyellow;
+    background-color: skyblue;
+    background-image: radial-gradient(farthest-corner at 5px 5px, rgba(40,130, 200, 1), rgba(255,255, 255, 0));
+}   
+
+#switch-1 div{
+    block-size: 50px;
+    inline-size:50px;
+    position:relative;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    /*this part get's modified on click*/
+    color: gold;
+    text-shadow: 3px 3px 3px dodgerblue;
+    /* z-index:7; */
+}

@@ -45,6 +45,8 @@ body{
 #switch-1{
     background-color: grey;
     border-radius:5px;
+    block-size: 50px;
+    inline-size:50px;
 }
 
 #switch-1 div{
@@ -70,14 +72,63 @@ body{
     justify-content: center;
     align-items: center;
     font-size: 50px;
-    transition:3s;
+    transition:2s;
     /*this part get's modified on click*/
     color: gold;
     text-shadow: 3px 3px 3px dodgerblue;
-    /* z-index:7; */
 }
 
 #switch-1 input:checked +div {
+    transition:5s;
     transform: rotateY(180deg);
-    content:'&#9789';
+    
+}
+
+#switch-1 input:not(:checked) +div {
+    transition:1s;
+    transform: rotateY(180deg);
+}
+
+#switch-1 #moon{
+    display:none;
+    margin-block-start:-50px;
+    block-size:50px;
+    font-size: 40px;
+    text-align: center;
+    background-color:blue;
+}
+
+   
+
+#switch-1 input:checked ~ #moon {
+    transition:3s;
+    display:block;
+    text-shadow:none;
+}
+
+/* #switch-1 input:checked +div p{
+    transition: 1s;
+    color:transparent;
+    transform: rotateY(180deg);
+    content:'☽';
+} */
+
+/* #switch-1 input:checked +div p:after{
+    transition:2s;
+    color:gold;
+    content:'☽';
+    margin-inline-start:-50px;
+    
+    transform: rotateY(180deg);
+} */
+
+/* #switch-1 div:last-child{
+    position:relative;
+    display: none;
+    top:-50px;  
+      
+} */
+
+p{
+    user-select:none;
 }

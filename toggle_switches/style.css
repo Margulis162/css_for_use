@@ -72,11 +72,11 @@ body{
     background-color: skyblue;
     background-image: radial-gradient(farthest-corner at 5px 5px, rgba(40,130, 200, 1), rgba(255,255, 255, 0));
     color: gold;
-    text-shadow: 3px 3px 3px dodgerblue;
+   
 }   
 
 
-#switch-1 #moon{
+#switch-1 #sun{
     transform: rotateY(180deg);
     margin-block-start:-50px;
     block-size:50px;
@@ -112,10 +112,14 @@ body{
     animation-fill-mode: forwards; 
  }
 
+#switch-1 #sun p{
+    text-shadow: -3px 3px 8px dodgerblue;
+}
+
 #switch-1 #moon p{
     text-shadow: none;
     padding-inline-end:5px;
-    padding-block-end:5px;
+    padding-block-end:8px;
 }
 
 #switch-1 input:checked ~#container {

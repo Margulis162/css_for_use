@@ -5,6 +5,7 @@
     padding:0;
 }
 
+
 body{
     background-color: lightgray;
 }
@@ -31,7 +32,7 @@ body{
 
 
 
-.switch input{
+.invis{
     width:5px;
     height:5px;
     opacity:0;
@@ -40,7 +41,7 @@ body{
     margin-inline-start:-5px; /*if i go down to one pixel it doesn't do what I intend to do. How curious!*/
 }
 
-/* toggle # 1 */
+/* toggle-1 */
 #switch-1{
     background-color: grey;
     border-radius:5px;
@@ -58,35 +59,39 @@ body{
     block-size: 50px;
     inline-size:50px;
     border-radius:5px;
+    text-align: center;
     position:relative;
     top:0;
     left:0;
-    display:flex;
+    font-size: 35px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    font-size: 50px;
+    
      /*this part get's modified on click*/
-    box-shadow: 
-                inset -1px -1px 6px steelblue,
-                inset 1px 1px 5px lightgoldenrodyellow;
-    background-color: skyblue;
-    background-image: radial-gradient(farthest-corner at 5px 5px, rgba(40,130, 200, 1), rgba(255,255, 255, 0));
-    color: gold;
+     box-shadow: 
+    inset 1px -1px 8px rgb(40, 2, 91),
+    inset -1px 1px 5px rgb(201, 245, 190);
    
+    color: gold;
+    background-color: rgb(9, 51, 68);
+    background-image: radial-gradient(farthest-corner at 5px 5px, rgba(40,130, 200, 1), rgba(255,255, 255, 0));
 }   
 
 
 #switch-1 #sun{
-    transform: rotateY(180deg);
-    margin-block-start:-50px;
-    block-size:50px;
-    font-size: 40px;
-    text-align: center;
+    position:relative;
+    block-size: 50px;
+    top:-50px;
+    left:0;
+    font-size: 35px;
     box-shadow: 
-    inset 1px -1px 8px rgb(40, 2, 91),
-    inset -1px 1px 5px rgb(201, 245, 190);
-    background-color: rgb(9, 51, 68);
+    inset -1px -1px 6px steelblue,
+    inset 1px 1px 5px lightgoldenrodyellow;
+   
+    background-color: skyblue;
     background-image: radial-gradient(farthest-corner at 5px 5px, rgba(40,130, 200, 1), rgba(255,255, 255, 0));
+  
 }
 
  #switch-1 input:checked ~#sun {
@@ -117,10 +122,11 @@ body{
 }
 
 #switch-1 #moon p{
-    text-shadow: none;
-    padding-inline-end:5px;
-    padding-block-end:8px;
+    transform: rotateY(180deg);
 }
+
+    
+
 
 #switch-1 input:checked ~#container {
   background-color:darkblue;
@@ -179,3 +185,5 @@ body{
 p{
     user-select:none;
 }
+
+/* switch-2 */

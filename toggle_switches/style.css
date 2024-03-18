@@ -183,3 +183,29 @@ p{
 }
 
 /* switch-2 */
+
+#switch-2{
+    block-size:34px;
+    inline-size:60px;
+    /* background-color: darkgray; */
+    color:yellow;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    transition: .4s;
+    user-select: none;
+}
+
+/* .slider{
+    background-color: gray;
+} */
+
+#slider-test{
+    padding-inline-end: 13px;
+}
+
+#switch-2 input:checked ~ #slider-test{
+    padding-inline-end: 0px;
+    padding-inline-start: 13px;
+}
+

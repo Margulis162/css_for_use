@@ -59,6 +59,7 @@ p{
     box-shadow: -1px -1px 3px gray,
     inset 1px 1px 6px rgb(105, 104, 104),
     2px 2px 3px white;
+    cursor:pointer;
 }
 
 /* sun and moon divs general styling */
@@ -187,25 +188,38 @@ p{
 #switch-2{
     block-size:34px;
     inline-size:60px;
-    /* background-color: darkgray; */
-    color:yellow;
+    color:cyan;
     font-size: 25px;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
-    transition: .4s;
     user-select: none;
+    /* border: 8px double gray; */
+    /* background-color: rgba(1, 124, 124, .2); */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px gray;
+    cursor:pointer;
+
 }
 
-/* .slider{
-    background-color: gray;
-} */
 
-#slider-test{
+
+#slider-0{
     padding-inline-end: 13px;
+    transition:.4s;
+    font-size: 24px;
 }
 
-#switch-2 input:checked ~ #slider-test{
+#switch-2:has(input:checked)  {
+    /* border: 8px ridge gray; */
+    /* background-color: rgb(2, 88, 88); */
+}
+
+#switch-2 input:checked ~ #slider-0{
     padding-inline-end: 0px;
     padding-inline-start: 13px;
+    
 }
 

@@ -186,9 +186,11 @@ p{
 /* switch-2 */
 
 #switch-2{
+    background-color:black;
+    background: linear-gradient(black, rgb(65, 29, 69), black);
     block-size:34px;
     inline-size:60px;
-    color:cyan;
+    color:magenta;
     font-size: 25px;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
@@ -198,28 +200,40 @@ p{
     display:flex;
     align-items: center;
     justify-content: center;
+    border-inline-start: 5px solid magenta;
+    border-inline-end: 5px solid magenta;
     border-radius: 5px;
-    box-shadow: 1px 1px 5px gray;
+    box-shadow: 5px 5px 15px gray;
     cursor:pointer;
-
+    box-sizing: border-box;
+    transition:1.5s;
 }
 
+#glitch{
+    display:none;
+    position: absolute ;
+}
 
+#switch-2:hover #glitch{
+    display: block;
+}
 
 #slider-0{
-    padding-inline-end: 13px;
+    padding-inline-end: 25px;
     transition:.4s;
     font-size: 24px;
 }
 
 #switch-2:has(input:checked)  {
-    /* border: 8px ridge gray; */
-    /* background-color: rgb(2, 88, 88); */
+    border-inline-start: 5px solid cyan;
+    border-inline-end: 5px solid cyan;
+    background: linear-gradient(black, rgb(29, 53, 69), black);
+  
 }
 
 #switch-2 input:checked ~ #slider-0{
     padding-inline-end: 0px;
-    padding-inline-start: 13px;
-    
+    padding-inline-start: 25px;
+    color:cyan;
 }
 

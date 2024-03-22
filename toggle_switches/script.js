@@ -1,5 +1,6 @@
 const switch1 = document.getElementById('switch-1')
 const switch2 = document.getElementById('switch-2')
+const glitch = document.getElementById('glitch')
 
 window.setTimeout(() => switch1.style.visibility = 'visible', 1000)
 
@@ -13,7 +14,24 @@ switch2.addEventListener('change',() => {
 })
 
 switch2.addEventListener('mouseover', (event)=>{
-    event.stopPropagation()
-    console.log(event.target)
-    setInterval(()=> event.target.childNodes[1].src  = 'toggle_switches/assets/glitch-2.svg', 1500)
+    // console.log('lol')
+  glitchHandler()
+    
 })
+
+switch2.addEventListener('mouseout', (event) => {
+    console.log('this')
+    clearInterval(glitchHandler)
+})
+
+function glitchHandler() {
+    // console.log('lol')
+    setInterval( () =>
+        {
+            console.log(glitch.src)
+            glitch.src == 'file:///home/mark/Desktop/for_future_use/toggle_switches/assets/glitch-1.svg' || ""? glitch.src = '../toggle_switches/assets/glitch-2.svg' : glitch.src = '../toggle_switches/assets/glitch-1.svg'
+        }
+       
+        , 2500
+    )
+}
